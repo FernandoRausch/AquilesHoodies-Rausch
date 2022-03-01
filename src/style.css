@@ -1,5 +1,10 @@
 h1{
     font-size: 40px;
+    text-align: center;
+    background-color: burlywood;
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Playfair Display', serif;
 }
 
 a{
@@ -9,4 +14,10 @@ a{
 
 nav{
     text-align: center;
+}
+
+#greeting{
+    text-align: center;
+    margin-top: 90px;
+    font-size: 50px;
 }
