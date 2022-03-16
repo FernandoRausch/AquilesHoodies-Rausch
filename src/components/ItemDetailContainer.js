@@ -1,7 +1,6 @@
 import React from "react"
 import { useState , useEffect } from "react"
-import ItemCount from "./ItemCount"
-import ItemList from "./ItemList"
+import ItemDetail from "./ItemDetail"
 
 
 let itemsIniciales = [
@@ -21,18 +20,18 @@ let itemsIniciales = [
         precio: 300
     }
 ]
-const ItemListContainer = () => {
-    const [items, setItems] = useState([])
+const ItemDetailContainer = () => {
+    const [item, setItem] = useState([])
 
     useEffect(() => {
         const pedido = new Promise((res,rej)=>{
             setTimeout(()=>{
-                res(itemsIniciales)
+                res(itemsIniciales[1])
             },2000)
         })
         pedido
         .then((resultado)=>{
-            setItems(resultado)
+            setItem(resultado)
         })
         .catch((error)=>{
             console.log("Hubo un error")
@@ -40,13 +39,9 @@ const ItemListContainer = () => {
     },[])
     return(
         <>
-        <ItemList 
-            productos={items}
-        ></ItemList>
-
-
+        <ItemDetail producto={item}/>
         </>
     )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer

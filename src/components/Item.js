@@ -2,7 +2,7 @@ import React from "react"
 
 const Item = (item) => {
     return(
-        <li></li>
+        <li key={item.id}>{item.nombre}</li>
     )}
 
 export default Item

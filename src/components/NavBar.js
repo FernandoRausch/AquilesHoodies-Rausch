@@ -6,10 +6,10 @@ const NavBar = () => {
         <header>
             <h1>Aquiles Hoodies</h1>
             <nav>
-                <a href="#">Inicio </a>
-                <a href="#">Shop </a>
-                <a href="#">Nosotros </a>
-                <a href="#">Contacto </a>
+            <li>Inicio</li>
+            <li>Shop</li>
+            <li>Nosotros</li>
+            <li>Contacto</li>
                 <CartWidget/>
             </nav>
         </header>
