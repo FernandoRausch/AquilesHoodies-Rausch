@@ -41,9 +41,12 @@ const ItemListContainer = () => {
     return(
         <>
         <ItemList 
-            productos={items}
+            productos={(items)}
         ></ItemList>
+        <ItemCount
+            stock={7}
 
+        ></ItemCount>
 
         </>
     )

@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         const pedido = new Promise((res,rej)=>{
             setTimeout(()=>{
-                res(itemsIniciales[1])
+                res(itemsIniciales[0])
             },2000)
         })
         pedido
@@ -39,7 +39,7 @@ const ItemDetailContainer = () => {
     },[])
     return(
         <>
-        <ItemDetail producto={item}/>
+        <ItemDetail producto={(item)}/>
         </>
     )
 }

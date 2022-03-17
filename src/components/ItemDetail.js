@@ -1,10 +1,10 @@
 import React from "react"
 
 
-const ItemDetail = (producto) => {
+const ItemDetail = ({producto}) => {
 
     return(          
-        <li> {producto.nombre}</li>
+        <li class="itemDetail"> {producto.nombre} ID:{producto.id} ${producto.precio}</li>
                     )
         }
 
