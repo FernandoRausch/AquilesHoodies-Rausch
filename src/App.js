@@ -10,7 +10,7 @@ const App = () => {
     <BrowserRouter>
       <Main/>
       <NavBar/>
-      <ItemListContainer/>
+      {/* <ItemListContainer/> */}
       <ItemDetailContainer/>
     </BrowserRouter>
     
