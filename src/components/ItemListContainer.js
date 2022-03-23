@@ -1,6 +1,5 @@
 import React from "react"
 import { useState , useEffect, } from "react"
-import ItemCount from "./ItemCount"
 import ItemList from "./ItemList"
 import {useParams} from "react-router-dom"
 
@@ -9,20 +8,24 @@ let itemsIniciales = [
     {
         id:1,
         nombre: "Producto 1",
-        precio: 100
+        precio: 100,
+        imagen: "https://i.pinimg.com/originals/f5/98/67/f59867a5279ebb9ea1a7d866d0951f20.jpg"
     },
     {
         id:2,
         nombre: "Producto 2",
-        precio: 200
+        precio: 200,
+        imagen: "https://i.pinimg.com/originals/f5/98/67/f59867a5279ebb9ea1a7d866d0951f20.jpg"
     },
     {
         id:3,
         nombre: "Producto 3",
-        precio: 300
+        precio: 300,
+        imagen: "https://i.pinimg.com/originals/f5/98/67/f59867a5279ebb9ea1a7d866d0951f20.jpg"
     }
 ]
 const ItemListContainer = () => {
+
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
     const {categoryId} = useParams()
@@ -48,10 +51,7 @@ const ItemListContainer = () => {
         <ItemList 
             productos={(items)}
         ></ItemList>
-        <ItemCount
-            stock={7}
 
-        ></ItemCount>
 
         </>
     )

@@ -13,7 +13,7 @@
           setEstado(estado-1)}
 
       const handleAdd = () => {
-          props.onAdd= props.onAdd + estado
+          props.onAdd(estado)
       }
 
     
