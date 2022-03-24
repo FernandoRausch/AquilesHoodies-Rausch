@@ -25,10 +25,9 @@ let itemsIniciales = [
     }
 ]
 const ItemListContainer = () => {
-
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
-    const {categoryId} = useParams()
+    const {id} = useParams()
     useEffect(() => {
         const pedido = new Promise((res,rej)=>{
             setTimeout(()=>{
@@ -45,7 +44,7 @@ const ItemListContainer = () => {
         .finally(()=>{
             setLoading(false)
         })
-    },[categoryId])
+    },[id])
     return(
         <>
         <ItemList 

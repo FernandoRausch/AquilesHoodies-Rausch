@@ -5,7 +5,7 @@ import React from "react"
 const ItemList = ({productos}) => {
 
     return(
-        <ul>{productos.map((producto)=>{
+        <ul className="itemList">{productos.map((producto)=>{
             return (            
                 <Item item={producto}>
                 </Item>

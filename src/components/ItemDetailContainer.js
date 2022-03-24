@@ -26,7 +26,6 @@ let itemsIniciales = [
 ]
 const ItemDetailContainer = () => {
     const [item, setItem] = useState([])
-
     const {id} = useParams()
     useEffect(() => {
         const pedido = new Promise((res,rej)=>{

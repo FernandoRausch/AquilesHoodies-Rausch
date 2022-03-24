@@ -8,9 +8,9 @@ const NavBar = () => {
         <header>
             <NavLink to="/"><h1>Aquiles Hoodies</h1></NavLink>
             <nav class="nav">
-            <NavLink to="/:categoryId"><ul>Shop</ul></NavLink>
-            <NavLink to="/:categoryId"><ul>Nosotros</ul></NavLink>
-            <NavLink to="/:categoryId"><ul>Contacto</ul></NavLink>
+            <NavLink to="/category/1"><ul>Shop</ul></NavLink>
+            <NavLink to="/category/2"><ul>Nosotros</ul></NavLink>
+            <NavLink to="/category/3"><ul>Contacto</ul></NavLink>
                 <CartWidget/>
             </nav>
         </header>
