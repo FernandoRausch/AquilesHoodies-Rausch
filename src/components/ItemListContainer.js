@@ -2,39 +2,14 @@ import React from "react"
 import { useState , useEffect, } from "react"
 import ItemList from "./ItemList"
 import {useParams} from "react-router-dom"
+import { pedidoItems } from "./Items"
 
-
-let itemsIniciales = [
-    {
-        id:1,
-        nombre: "Producto 1",
-        precio: 100,
-        imagen: "https://i.pinimg.com/originals/f5/98/67/f59867a5279ebb9ea1a7d866d0951f20.jpg"
-    },
-    {
-        id:2,
-        nombre: "Producto 2",
-        precio: 200,
-        imagen: "https://i.pinimg.com/originals/f5/98/67/f59867a5279ebb9ea1a7d866d0951f20.jpg"
-    },
-    {
-        id:3,
-        nombre: "Producto 3",
-        precio: 300,
-        imagen: "https://i.pinimg.com/originals/f5/98/67/f59867a5279ebb9ea1a7d866d0951f20.jpg"
-    }
-]
 const ItemListContainer = () => {
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
-    const {id} = useParams()
+    const {categoryId} = useParams()
     useEffect(() => {
-        const pedido = new Promise((res,rej)=>{
-            setTimeout(()=>{
-                res(itemsIniciales)
-            },2000)
-        })
-        pedido
+        pedidoItems(categoryId)
         .then((resultado)=>{
             setItems(resultado)
         })
@@ -44,16 +19,18 @@ const ItemListContainer = () => {
         .finally(()=>{
             setLoading(false)
         })
-    },[id])
+    },[categoryId])
+    if(loading){
+        return <h1>Cargando...</h1>
+    }else{
     return(
         <>
-        <ItemList 
-            productos={(items)}
-        ></ItemList>
+        <ItemList productos={(items)}/>
 
 
         </>
     )
+    }
 }
 
 export default ItemListContainer

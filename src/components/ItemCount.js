@@ -2,7 +2,9 @@
 
 
   const ItemCount = (props) => {
+
       let [estado, setEstado] = useState(0)
+      
       const handleSumar = () => {
           if(estado<props.stock){
               setEstado(estado+1)}
@@ -19,9 +21,9 @@
     
       return(<>
           <p>{estado}</p>
-          <button onClick={handleSumar}>+</button>
-          <button onClick={handleRestar}>-</button>
-          <button onClick={handleAdd}>Agregar al carrito</button>
+          <button  onClick={handleSumar}>+</button>
+          <button  onClick={handleRestar}>-</button>
+          <button  onClick={handleAdd}>Agregar al carrito</button>
           </>
       );
   }
