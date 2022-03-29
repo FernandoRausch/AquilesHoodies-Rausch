@@ -19,12 +19,12 @@
       }
 
     
-      return(<>
-          <p>{estado}</p>
-          <button  onClick={handleSumar}>+</button>
-          <button  onClick={handleRestar}>-</button>
-          <button  onClick={handleAdd}>Agregar al carrito</button>
-          </>
+      return(<div className="divCounter">
+          <p className="counter">{estado}</p>
+          <button className="button" onClick={handleSumar}>+</button>
+          <button className="button" onClick={handleRestar}>-</button>
+          <button className="button" onClick={handleAdd}>Agregar al carrito</button>
+          </div>
       );
   }
     
