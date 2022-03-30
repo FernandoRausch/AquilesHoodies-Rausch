@@ -2,61 +2,54 @@ import React, {createContext, useState } from 'react';
 
 export const contexto = createContext();
 
-export const CartContextProvider = ({ children }) => {
-    const [cart, setCart] = useState([]);
+const { Provider } = contexto
 
-    const addToCart = (producto, cant) => {
-        isOnCart(producto.id)
-            ? sumarCantidad(producto, cant)
-            : setCart([...cart, { ...producto, cant }]);
-    };
+export const MiProvider = ({ children }) => {
+    const [carrito, setCarrito] = useState([]);
 
-    const isOnCart = (id) => {
-        return cart.some((prod) => prod.id === id);
-    };
+    const addItem = (item, cantidad) => {
 
-    const sumarCantidad = (producto, cant) => {
-        const newProducts = cart.map((prod) => {
-            if (prod.id === producto.id) {
-                const newProduct = {
-                    ...prod,
-                    cant: prod.cant + cant,
-                };
-                return newProduct;
-            } else {
-                return prod;
-            }
-        });
-        setCart(newProducts);
-    };
+        const copiaCarrito = [...carrito];
+        const itemAlCarrito = { ...item, cantidad};        
 
-    const vaciarCarrito = () => {
-        setCart([]);
-    };
+        if(yaExisteEnCarrito(item.id)) {            
+            let index = copiaCarrito.findIndex( producto => producto.id === producto.id)
+            copiaCarrito[index].cantidad += cantidad;
+            setCarrito(copiaCarrito)
+        } 
+        else{
+            copiaCarrito.push(itemAlCarrito);
+            setCarrito(copiaCarrito);
+        }        
+    }
 
-    const calcularTotal = () => {
-        let totalCarrito = 0;
-        cart.forEach((prod) => {
-            totalCarrito += prod.precio * prod.cant;
-        });
-        return totalCarrito;
-    };
+    const yaExisteEnCarrito = (id) => {
+        return carrito.some(producto => producto.id === id)
+    }
 
-    const borrarProd = (id) => {
-        setCart(cart.filter((prod) => prod.id !== id));
-    };
+    const calcCantidad = () =>{
+        let cantidad= 0;
+        carrito.forEach( item => cantidad = item.cantidad);
+        return cantidad
+    }
+
+    const total = () =>{
+        let totalCarrito= 0;
+        carrito.forEach( item => totalCarrito += item.cantidad * item.precio);
+        return totalCarrito
+    }
+
 
     return (
-        <contexto.Provider
+        <Provider
             value={{
-                cart,
-                addToCart,
-                vaciarCarrito,
-                calcularTotal,
-                borrarProd,
+                carrito,
+                addItem,
+                calcCantidad,
+                total
             }}
         >
             {children}
-        </contexto.Provider>
+        </Provider>
     );
 };

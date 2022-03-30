@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { contexto } from "./CartContext.js"
 
 const Shop = () => {
-    const { cart, calcularTotal,} =
+    const { carrito, total } =
         useContext(contexto);
 
 
@@ -11,20 +11,25 @@ const Shop = () => {
     return (
         <>
                 <div>
-                    {cart.map((prod) => (
+                    {carrito.map((item) => (
                         <div>
                             <div>
-                                <h3>Nombre: {prod.nombre}</h3>
-                                <h4>Cantidad: {prod.cantidad}</h4>
-                                <h4>Precio c/u: $ {prod.precio}</h4>
+                                <h3>Nombre: {item.nombre}</h3>
+                                <h4>Cantidad: {item.cantidad}</h4>
+                                <h4>Precio c/u: $ {item.precio}</h4>
                                 <h4>
-                                    Subtotal: $ {prod.precio * prod.cantidad}
+                                    Subtotal: $ {item.precio * item.cantidad}
                                 </h4>
+                                
+
 
                             </div>
+                            
                         </div>
                     ))}
-                    <h2>Total: ${calcularTotal()}</h2>
+                    <h4 >
+                                    Total: $ {total()}
+                                </h4>
                 </div>
  
         </>

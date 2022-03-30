@@ -1,7 +1,9 @@
 import { Link , NavLink } from "react-router-dom"
-
+import { contexto } from "./CartContext.js"
+import { useContext } from "react"
 
 const NavBar = () => {
+    const {calcCantidad} = useContext(contexto)
     return(
         <header>
             <NavLink to="/"><h1>Aquiles Hoodies</h1></NavLink>
@@ -13,6 +15,7 @@ const NavBar = () => {
                 <span className="material-icons">
                     shopping_cart
                 </span>
+                {calcCantidad()}
             </Link>
             </nav>
         </header>
