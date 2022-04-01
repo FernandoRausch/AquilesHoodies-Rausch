@@ -53,6 +53,7 @@ const orden = {
                             <td ><b>Total:</b> </td>
                             <td ><b>$ {total()}</b> </td>        
                         </tr>   
+                        <button onClick={terminarCompra}>Terminar compra</button>
                     </table>
                 </div>
  
