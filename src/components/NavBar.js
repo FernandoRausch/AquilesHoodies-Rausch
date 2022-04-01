@@ -7,7 +7,7 @@ const NavBar = () => {
     return(
         <header>
             <NavLink to="/"><h1>Aquiles Hoodies</h1></NavLink>
-            <nav class="nav">
+            <nav className="nav">
             <NavLink to="/category/con"><ul>Con capucha</ul></NavLink>
             <NavLink to="/category/sin"><ul>Sin capucha</ul></NavLink>
             <NavLink to="/category/canguro"><ul>Canguro</ul></NavLink>

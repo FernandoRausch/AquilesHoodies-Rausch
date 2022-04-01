@@ -3,14 +3,14 @@ import Item from "./Item"
 const ItemList = ({productos}) => {
 
     return(
-        <ul className="itemList">
+        <section className="itemList">
             {productos.map((producto)=>{
                 return (            
                 <Item key={producto.id} item={producto}>
                 </Item>
                     )
         })}
-        </ul>
+        </section>
 
     )
 }

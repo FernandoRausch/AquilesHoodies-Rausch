@@ -1,35 +1,59 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { contexto } from "./CartContext.js"
+import { db } from "./Firebase"
+import { collection, addDoc, serverTimestamp } from "firebase/firestore"
 
 const Shop = () => {
-    const { carrito, total } =
-        useContext(contexto);
-
-
+    const { carrito, total } = useContext(contexto);
+const orden = {
+    buyer: {
+        nombre: "name",
+        telefono: "tel",
+        email: "asd@gmail.com"
+    },
+    items : carrito,
+    date : serverTimestamp,
+    total : total
+}
+    const terminarCompra = () => {
+        const ordenesCollection = collection (db, "ordenes")
+        const pedido = addDoc(ordenesCollection,orden)
+        pedido.then(res=>{
+            console.log(res)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+    }
 
     return (
         <>
                 <div>
-                    {carrito.map((item) => (
-                        <div>
-                            <div>
-                                <h3>Nombre: {item.nombre}</h3>
-                                <h4>Cantidad: {item.cantidad}</h4>
-                                <h4>Precio c/u: $ {item.precio}</h4>
-                                <h4>
-                                    Subtotal: $ {item.precio * item.cantidad}
-                                </h4>
-                                
-
-
-                            </div>
-                            
-                        </div>
+                <h2 className='cart_h3'>Mi carrito</h2>
+                    <table border="1px" className='cart_table'>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Precio c/u</th>
+                            <th>Subtotal</th>  
+                        </tr>        
+                    {carrito.map((item) => (<>                     
+                         <tr>
+                            <td >{item.nombre}</td>
+                            <td >{item.cantidad}</td>
+                            <td >$ {item.precio}</td>
+                            <td > $ {item.precio * item.cantidad}</td>        
+                        </tr>                        
+                                            </>
                     ))}
-                    <h4 >
-                                    Total: $ {total()}
-                                </h4>
+                        <tr>
+                            <td ></td>
+                            <td ></td>
+                            <td ><b>Total:</b> </td>
+                            <td ><b>$ {total()}</b> </td>        
+                        </tr>   
+                    </table>
                 </div>
  
         </>

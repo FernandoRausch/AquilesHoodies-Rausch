@@ -1,27 +1,22 @@
 import { useState , useEffect } from "react"
 import ItemDetail from "./ItemDetail"
 import {useParams} from "react-router-dom"
-import { pedidoItem } from "./Items"
+import { db } from "./Firebase"
+import { collection, getDoc, doc, query, getDocs, where } from "firebase/firestore"
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({})
     const [loading, setLoading] = useState(true);
     const {id} = useParams()
     useEffect(() => {
-        
-        pedidoItem(id)
-        .then((resultado)=>{
-            setItem(resultado)
-        })
-        .catch((error)=>{
-            console.log("Hubo un error")
-        })
-        .finally(()=>{
-            setLoading(false)
-          })
-          return () => {
-            setItem({});
-        };
+        const itemsCollection = collection(db,"Items")
+        const filtro = query(itemsCollection,where("id","==",Number(id)))
+        const pedido = getDocs(filtro)
+        pedido
+        .then(res=>setItem(res.docs.map(doc=>doc.data())[0]))
+        .catch(()=>{console.log("Hubo un error")})
+        .finally(()=>{setLoading(false)})
+
     },[id])
     if(loading){
         return <h1>Cargando...</h1>

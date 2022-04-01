@@ -3,8 +3,9 @@ import { Link } from "react-router-dom"
 const Item = ({item}) => {
     return(
         <article className="items">
-            <ul key={item.id}>{item.nombre}</ul>
-            <ul >${item.precio}</ul>
+            <h2 className="tituloItems" key={item.id}>{item.nombre}</h2>
+            <img className="imagenItems" src={item.imagen}/>
+            <p >${item.precio}</p>
             <Link to={`/detail/${item.id}`}>Ver detalle</Link>
         </article>
     )}
