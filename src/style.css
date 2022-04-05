@@ -18,7 +18,12 @@ h1{
 header{
     background-color: burlywood;
 }
-
+p{
+  font-size: 30px;
+  margin: 10px;
+  color: black;
+  text-decoration: none;
+}
 ul{
     font-size: 30px;
     margin: 10px;
@@ -51,9 +56,8 @@ nav{
 .itemDetail{
     background-color: #D0D0D0;
     width: 20%;
-    margin-left: 20%;
-    margin-top: 10%;
     border-radius: 5%;
+    margin-top: 8%;
 }
 
 .items{
@@ -110,8 +114,7 @@ nav{
 
 
   .cart_h3{
-    margin-left: 30%;
-    margin-top: 2%;
+    margin-right: 30%;
   }
 
   .cart_table{
@@ -154,3 +157,69 @@ nav{
   h2{
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
+
+  .imagenDetail{
+    margin-left: 35%;
+    margin-top: 5%;
+
+  }
+
+  .divItemDetail{
+    display: flex;
+  }
+
+
+  a{
+    text-decoration: none;
+    color: black;
+    }
+    
+    a:visited{
+    text-decoration: none;
+    color: black;}
+
+
+    .eliminarProd{
+      width: 1%;
+      padding: 1px;
+      margin: 1px
+    }
+    .cartButtons{
+      display: flex;
+    }
+.tituloCart{
+  display: flex;
+  justify-content: center;
+}
+
+.detailButton{
+  background-color: grey;
+  border-radius: 5%;
+  color: black;
+  margin-left: 20%;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.linkCart{
+
+  color: white;
+  
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius:5px;
+  font-size: 20px;
+}
+
+.divCart{
+  margin: "7%";
+  display: 'flex';
+  flex-direction: 'column';
+  justify-content: 'center';
+  align-items: 'center';
+}

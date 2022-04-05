@@ -4,9 +4,9 @@ const Item = ({item}) => {
     return(
         <article className="items">
             <h2 className="tituloItems" key={item.id}>{item.nombre}</h2>
-            <img className="imagenItems" src={item.imagen}/>
+            <img className="imagenItems" src={item.imagen} alt="hoodie"/>
             <p >${item.precio}</p>
-            <Link to={`/detail/${item.id}`}>Ver detalle</Link>
+            <Link className="detailButton" to={`/detail/${item.id}`}>Ver detalle</Link>
         </article>
     )}
 
