@@ -2,12 +2,12 @@
     margin: 0;
 }
 body{
-    background-color: beige;
+    background-color: rgb(228, 227, 227);
 }
 
 h1{
     text-decoration: none;
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
     padding: 0%;
     margin: 0%;
@@ -16,13 +16,15 @@ h1{
 }
 
 header{
-    background-color: burlywood;
+    background-color: #F57021;
 }
 p{
-  font-size: 30px;
-  margin: 10px;
+  font-size: 22px;
+  font-weight: 800;
   color: black;
+  margin: 4px;
   text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 ul{
     font-size: 30px;
@@ -32,8 +34,52 @@ ul{
 
 }
 
-nav{
-    text-align: center;
+.solid {
+  border-top: 3px solid rgb(206, 206, 206);
+}
+
+.detalles{
+  width: 600px;
+  margin-left: 1%;
+}
+
+.seguirCart{
+  background-color: green;
+  border-radius: 5%;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: inset -3px -3px 0 rgb(0 0 0 / 20%);
+}
+
+.seguirCart h2{
+  color: white;
+}
+
+.classDiv{
+  margin-top: 3%;
+}
+
+.imagenCart{
+  border-radius: 15%;
+}
+
+.descripcion{
+  font-size: 24px;
+}
+
+.botonesDetail{
+  padding-top: 30%;
+}
+
+.indexBanner{
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  text-transform: uppercase;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
 }
 
 #greeting{
@@ -41,17 +87,70 @@ nav{
     margin-top: 90px;
     font-size: 50px;
 }
+/*footer*/
+.footer{
+  background-color: #F57021;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
 
+/* NavBar */
 .nav{
-    text-align: center;
-    display: flex;
-    flex-flow: row; 
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 15%;
+  padding-top: 1%;
 }
 
-.material-icons{
-    padding-top: 20px;
+.imagenLogo{
+  display: flex;
 }
+
+.imagenLogo h1{
+  padding-top: 10px;
+}
+
+.search{
+  display: flex;
+  margin-left: 8%;
+  align-items: center;
+}
+.search input{
+  height: 30px;
+  width: 300px;
+}
+.search button {
+  height: 36px;
+}
+
+.icon{
+  display: flex;
+  margin-left: 5%;
+  align-items: center;
+}
+
+
+.nav2{
+  display: flex;
+  left: 25%;
+  justify-content: center;
+  margin-right: 35%;
+}
+
+.nav2 p{
+  padding-right: 5%;
+}
+
+.nav2 p :hover{
+  text-decoration: underline;
+}
+
+
+
 
 .itemDetail{
     background-color: #D0D0D0;
@@ -61,38 +160,75 @@ nav{
 }
 
 .items{
-    padding: 0.5rem;
-    background-color: #ffffff;
-    border-radius: 3px;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    object-fit: cover;
-
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  object-fit: cover;
 }
+
+.items p{
+  text-align: center;
+}
+
+.detailButton{
+  background-color: green;
+  border-radius: 5%;
+  margin-left: 30%;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 6px;
+  box-shadow: inset -3px -3px 0 rgb(0 0 0 / 20%);
+}
+
+.detailButton :active{
+  transform: translateY(2px);
+}
+
+.detailButton p{
+  font-size: 15px;
+  color: white;
+}
+
+.tituloItems{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+
 
 .counter{
-    background-color: #e2e2e2;
-    border-radius: 5%;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-bottom: 6px;
-}
-
-.button {
     background-color: white;
     border-radius: 5%;
     color: black;
-    padding: 15px 32px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    margin-right: 0;
+    margin-left: 0;
+    border: 1px solid black ;
+}
+
+.button {
+    background-color: green;
+    border-radius: 5%;
+    color: white;
+    padding: 10px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin-bottom: 6px;
+    box-shadow: inset -3px -3px 0 rgb(0 0 0 / 20%);
   }
 
   .divCounter{
@@ -100,18 +236,48 @@ nav{
   }
 
   .terminar{
-    background-color: #e2e2e2;
+    display: flex;
     border-radius: 5%;
     color: black;
-    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    justify-content: center;
+  }
+
+  .buttonDetail {
+    background-color: green;
+    border-radius: 5%;
+    padding: 1px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
-    margin-bottom: 6px;
-    margin-left: 4%;
+    box-shadow: inset -3px -3px 0 rgb(0 0 0 / 20%);
   }
 
+  .buttonDetail :active{
+    transform: translateY(2px);
+  }
+  
+  .buttonDetail p{
+    font-size: 15px;
+    color: white;
+  }
+
+  .imagenDetail{
+    margin-left: 20%;
+    margin-top: 5%;
+    position: absolute;
+    display: flex;
+   }
+  
+   .imagenDetail p{
+  text-transform: uppercase;
+   }
+  
+   .imagenDetail img{
+  border-radius: 10%;
+    }
 
   .cart_h3{
     margin-right: 30%;
@@ -132,11 +298,7 @@ nav{
       padding: 2%;
   }
 
-  .tituloItems{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
+
 
   .imagenItems{
     height: 200px;
@@ -145,65 +307,69 @@ nav{
     margin: 10px 0;
   }
 
-  .itemList{
-    padding: 7%;
-    padding-right: 20%;
-    padding-left: 20%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 5rem;
-  }
-
-  h2{
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-
-  .imagenDetail{
-    margin-left: 35%;
-    margin-top: 5%;
-
-  }
-
-  .divItemDetail{
-    display: flex;
-  }
-
-
-  a{
-    text-decoration: none;
-    color: black;
-    }
-    
-    a:visited{
-    text-decoration: none;
-    color: black;}
-
-
-    .eliminarProd{
-      width: 1%;
-      padding: 1px;
-      margin: 1px
-    }
-    .cartButtons{
-      display: flex;
-    }
-.tituloCart{
-  display: flex;
-  justify-content: center;
+.itemList{
+  padding: 4%;
+  padding-right: 20%;
+  padding-left: 20%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 5rem;
 }
 
-.detailButton{
-  background-color: grey;
-  border-radius: 5%;
+h2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+
+
+
+.divItemDetail{
+  display: flex;
+}
+
+a{
+  text-decoration: none;
   color: black;
-  margin-left: 20%;
-  padding: 15px 20px;
+  }
+    
+a:visited{    
+  text-decoration: none;
+  color: black;}
+
+
+.eliminarProd{
+    width: 1%;
+    padding: 1px;
+    margin: 1px
+  }
+
+
+.cartButtons{
+  display: flex;
+  }
+
+.cartButtons button{
+  border-radius: 5%;
+  padding: 1px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  box-shadow: inset -3px -3px 0 rgb(0 0 0 / 20%);
   font-size: 20px;
-  margin-bottom: 6px;
+  color: #ffffff;
+  }
+
+ .buttonTerminarCart{
+  background-color: green;
+ }
+ .buttonVaciar{
+  background-color: red;
+ }
+.tituloCart{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
 }
+
 
 .linkCart{
 

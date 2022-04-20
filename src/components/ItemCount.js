@@ -23,7 +23,7 @@
           <p className="counter">{estado}</p>
           <button className="button" onClick={handleSumar}>+</button>
           <button className="button" onClick={handleRestar}>-</button>
-          <button className="button" onClick={handleAdd}>Agregar al carrito</button>
+          <button className="button" onClick={handleAdd}>AGREGAR AL CARRITO</button>
           </div>
       );
   }

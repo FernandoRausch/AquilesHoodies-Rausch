@@ -12,15 +12,18 @@ const ItemDetail = ({producto}) => {
     return(
         <div>  
             <div className="imagenDetail">
-                <p>{producto.nombre} </p>
-                <img width="600px" src={producto.imagen} alt="" />
-                <p>ID:{producto.id}</p>
-                <p>Precio: ${producto.precio}</p> 
-                {seleccionado === 0 ? 
-            <ItemCount stock={producto.stock}onAdd={onAdd}></ItemCount> : <div><Link className="terminar" to="/">Seguir comprando</Link> <Link className="terminar" to="/cart">Terminar compra</Link></div>}  
+                <div><img width="600px" src={producto.imagen} alt="" /></div>
+                <div className="detalles">
+                    <p>{producto.nombre} </p>
+                    <p>${producto.precio}</p> 
+                    <span className="descripcion">{producto.descripcion}</span>
+                    <p >ID:{producto.id}</p>
+                    <div className="botonesDetail">
+                    {seleccionado === 0 ? 
+                    <ItemCount stock={producto.stock}onAdd={onAdd}></ItemCount> : <div className="terminar"><Link className="buttonDetail" to="/"><p>Seguir comprando</p></Link> <Link className="buttonDetail" to="/cart"><p>Terminar compra</p></Link></div>}</div>
+                </div>                
             </div>
         </div>
-         
         )}
 
 

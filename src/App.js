@@ -1,4 +1,5 @@
 import NavBar from "./components/NavBar"
+import Footer from "./components/Footer";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { Routes, Route, BrowserRouter } from "react-router-dom"
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/detail/:id" element={<ItemDetailContainer/>}/>
         <Route path="/cart" element={<Cart/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
     </MiProvider>
     

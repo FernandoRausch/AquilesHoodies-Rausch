@@ -34,9 +34,9 @@ const ItemListContainer = () => {
     if(loading){
         return <h1>Cargando...</h1>
     }else{
-    return(
-        <>
-        <ItemList productos={(items)}/>
+    return(<>
+            <p className="indexBanner">Nuestros productos</p><hr class="solid"/>
+            <ItemList productos={(items)}/>
 
 
         </>

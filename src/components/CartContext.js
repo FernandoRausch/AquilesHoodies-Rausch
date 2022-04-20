@@ -22,7 +22,7 @@ export const MiProvider = ({ children }) => {
     }
     const calcCantidad = () =>{
         let cantidad= 0;
-        carrito.forEach( item => cantidad = item.cantidad);
+        carrito.forEach( item => cantidad += item.cantidad);
         return cantidad
     }
     const total = () =>{
