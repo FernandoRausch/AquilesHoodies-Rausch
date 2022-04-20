@@ -1,11 +1,13 @@
-import React,{useContext} from 'react';
+import React,{useContext, useState} from 'react';
 import {contexto} from "./CartContext.js";
 import {db} from "./Firebase";
 import {collection,addDoc} from "firebase/firestore";
 import {Link} from 'react-router-dom';
 const Shop = () => {
     const { carrito, total, borrarProd,vaciarCarrito } = useContext(contexto);
+    const [terminado,setTerminado] = useState(false)
     const terminarCompra = () => {
+        setTerminado(true)
         const orden = {
             buyer:{
                 nombre: "name",
@@ -21,7 +23,18 @@ const Shop = () => {
             .catch(error=>{console.log(error)})
     }
     return (<>
-        {carrito.length === 0 ? (
+        {terminado === true ? <div
+            style={{
+                    margin: "7%",
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    }}>
+            <p>¡Tu pedido fue realizado con exito!</p>
+            <Link className='linkCart' to="/"><button className='button'>Volver a la pagina principal</button>  </Link>
+            
+        </div> : <div>{carrito.length === 0 ? (
         <div
             style={{
                     margin: "7%",
@@ -78,7 +91,8 @@ const Shop = () => {
 
                 </div>
             </table>
-        </div>)}
+        </div>)}</div>}
+        
     </>
     )
 }

@@ -6,17 +6,17 @@ body{
 }
 
 h1{
-    text-decoration: none;
-    font-size: 35px;
-    text-align: center;
-    padding: 0%;
-    margin: 0%;
-    font-family: 'Playfair Display', serif;
-    color: black;
+  text-decoration: none;
+  font-size: 35px;
+  text-align: center;
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Playfair Display', serif;
+  color: black;
 }
 
 header{
-    background-color: #F57021;
+  background-color: #F57021;
 }
 p{
   font-size: 22px;
@@ -27,10 +27,10 @@ p{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 ul{
-    font-size: 30px;
-    margin: 10px;
-    color: black;
-    text-decoration: none;
+  font-size: 30px;
+  margin: 10px;
+  color: black;
+  text-decoration: none;
 
 }
 
@@ -83,11 +83,11 @@ ul{
 }
 
 #greeting{
-    text-align: center;
-    margin-top: 90px;
-    font-size: 50px;
+  text-align: center;
+  margin-top: 90px;
+  font-size: 50px;
 }
-/*footer*/
+
 .footer{
   background-color: #F57021;
   display: flex;
@@ -98,7 +98,6 @@ ul{
   width: 100%;
 }
 
-/* NavBar */
 .nav{
   display: flex;
   justify-content: center;
@@ -153,10 +152,10 @@ ul{
 
 
 .itemDetail{
-    background-color: #D0D0D0;
-    width: 20%;
-    border-radius: 5%;
-    margin-top: 8%;
+  background-color: #D0D0D0;
+  width: 20%;
+  border-radius: 5%;
+  margin-top: 8%;
 }
 
 .items{
@@ -204,71 +203,71 @@ ul{
 
 
 .counter{
-    background-color: white;
-    border-radius: 5%;
-    color: black;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin-bottom: 6px;
-    margin-right: 0;
-    margin-left: 0;
-    border: 1px solid black ;
+  background-color: white;
+  border-radius: 5%;
+  color: black;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  margin-right: 0;
+  margin-left: 0;
+  border: 1px solid black ;
 }
 
 .button {
-    background-color: green;
-    border-radius: 5%;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-bottom: 6px;
-    box-shadow: inset -3px -3px 0 rgb(0 0 0 / 20%);
+  background-color: green;
+  border-radius: 5%;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 6px;
+  box-shadow: inset -3px -3px 0 rgb(0 0 0 / 20%);
   }
 
   .divCounter{
-    margin-left: 10%;
+  margin-left: 10%;
   }
 
   .terminar{
-    display: flex;
-    border-radius: 5%;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    justify-content: center;
+  display: flex;
+  border-radius: 5%;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  justify-content: center;
   }
 
   .buttonDetail {
-    background-color: green;
-    border-radius: 5%;
-    padding: 1px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: inset -3px -3px 0 rgb(0 0 0 / 20%);
+  background-color: green;
+  border-radius: 5%;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: inset -3px -3px 0 rgb(0 0 0 / 20%);
   }
 
   .buttonDetail :active{
-    transform: translateY(2px);
+  transform: translateY(2px);
   }
   
   .buttonDetail p{
-    font-size: 15px;
-    color: white;
+  font-size: 15px;
+  color: white;
   }
 
   .imagenDetail{
-    margin-left: 20%;
-    margin-top: 5%;
-    position: absolute;
-    display: flex;
+  margin-left: 20%;
+  margin-top: 5%;
+  position: absolute;
+  display: flex;
    }
   
    .imagenDetail p{
@@ -280,31 +279,31 @@ ul{
     }
 
   .cart_h3{
-    margin-right: 30%;
+  margin-right: 30%;
   }
 
   .cart_table{
-    margin-left: 30%;
-    width: 40%;
+  margin-left: 30%;
+  width: 40%;
   }
 
   .cart_details{
-    display: inline-block;
-    margin-left: 20px;
+  display: inline-block;
+  margin-left: 20px;
   }
 
   td{
-      text-align: center;
-      padding: 2%;
+  text-align: center;
+  padding: 2%;
   }
 
 
 
   .imagenItems{
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    margin: 10px 0;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  margin: 10px 0;
   }
 
 .itemList{
@@ -314,56 +313,55 @@ ul{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 5rem;
-}
+ }
 
 h2{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  }
 
-
-
 .divItemDetail{
   display: flex;
-}
+ }
 
 a{
   text-decoration: none;
   color: black;
-  }
+ }
     
 a:visited{    
   text-decoration: none;
-  color: black;}
+  color: black;
+  }
 
 
 .eliminarProd{
-    width: 1%;
-    padding: 1px;
-    margin: 1px
+  width: 1%;
+  padding: 1px;
+  margin: 1px
   }
 
 
 .cartButtons{
-  display: flex;
-  }
+display: flex;
+}
 
 .cartButtons button{
-  border-radius: 5%;
-  padding: 1px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: inset -3px -3px 0 rgb(0 0 0 / 20%);
-  font-size: 20px;
-  color: #ffffff;
-  }
+border-radius: 5%;
+padding: 1px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+box-shadow: inset -3px -3px 0 rgb(0 0 0 / 20%);
+font-size: 20px;
+color: #ffffff;
+}
 
- .buttonTerminarCart{
-  background-color: green;
- }
- .buttonVaciar{
-  background-color: red;
- }
+.buttonTerminarCart{
+background-color: green;
+}
+.buttonVaciar{
+background-color: red;
+}
 .tituloCart{
   display: flex;
   justify-content: center;
@@ -372,9 +370,7 @@ a:visited{
 
 
 .linkCart{
-
   color: white;
-  
   padding: 10px;
   margin: 10px;
   text-decoration: none;
